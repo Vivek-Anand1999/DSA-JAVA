@@ -1,8 +1,6 @@
 package treeProblems.practise;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 //!# Driver code
@@ -54,24 +52,24 @@ class Binary1Tree {
         nodeAddress.add(newNode);
     }
 
-    public void levelOrder(Node root){
-        Queue<Node> q= new LinkedList<>();
-        if(root == null){
+    public void levelOrder(Node root) {
+        Queue<Node> q = new LinkedList<>();
+        if (root == null) {
             return;
         }
         Node temp = root;
         System.out.println(temp.data);
         q.add(temp);
-        while (!q.isEmpty()){
+        while (!q.isEmpty()) {
             temp = q.poll();
-            if(temp.left == null){
+            if (temp.left == null) {
                 System.out.println("null");
             }
-            if(temp.left != null){
+            if (temp.left != null) {
                 System.out.println(temp.left.data);
                 q.add(temp.left);
             }
-            if(temp.right != null){
+            if (temp.right != null) {
                 System.out.println(temp.right.data);
                 q.add(temp.right);
             }
